@@ -9,10 +9,10 @@
 
 ### Chonology
 1. Deployed DAO on Rinkeby using [the above link](https://alchemy-staging-rinkeby.herokuapp.com/daos/create#)
-2. Adapted the [JSON file](https://github.com/daostack/alchemy/blob/dev/src/genericSchemeRegistry/schemes/DutchX.json) to our `CO2ken.sol` contract methods. Find the  `CO2ken.json` file [here](https://github.com/CO2ken/alchemy/blob/dev/src/genericSchemeRegistry/schemes/CO2ken.json)
+2. Adapted the [JSON file](https://github.com/daostack/alchemy/blob/dev/src/genericSchemeRegistry/schemes/DutchX.json) to our `FCO2ken.sol` contract methods. Find the  `FCO2ken.json` file [here](https://github.com/CO2ken/alchemy/blob/dev/src/genericSchemeRegistry/schemes/CO2ken.json)
 3. Adapted the UI by following these steps:
     * forked the DAOStack UI called Alchemy from [here](https://github.com/daostack/alchemy)
-    * added the `CO2ken.json` file to [`alchemy/src/genericSchemeRegistry/schemes`](https://github.com/CO2ken/alchemy/tree/dev/src/genericSchemeRegistry/schemes)
+    * added the `FCO2ken.json` file to [`alchemy/src/genericSchemeRegistry/schemes`](https://github.com/CO2ken/alchemy/tree/dev/src/genericSchemeRegistry/schemes)
     * updated the [`index.ts`](https://github.com/CO2ken/alchemy/blob/dev/src/genericSchemeRegistry/index.ts) file to include the new scheme. Had to hack this one. See comments in the code.
     * Added `else if(genericSchemeInfo.specs.name === "CO2ken") {
       return <ProposalSummaryC02ken {...this.props} />;
