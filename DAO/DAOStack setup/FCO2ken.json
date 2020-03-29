@@ -1,11 +1,11 @@
 {
-    "name": "CO2ken",
+    "name": "FCO2ken",
     "addresses": {
       "main": [
         ""
       ],
       "rinkeby": [
-        "0x6a1B0C693DD4AA99bA8E93247AA221Fb30525Cfe"
+        "<ADD_RINKEBY_CONTRACT_FOR_MAIN_FCO2KEN"
       ],
       "private": [
         ""
@@ -14,9 +14,9 @@
     "actions": [
       {
         "id": "mint",
-        "label": "Mint new CO2kens",
-        "description": "One CO2ken represents 1 negative tonne of carbon. New CO2kens can be created by providing proof that an equivalent amount of carbon offsets have been purchased. An IPFS hash to this proof has to be provided when making this proposal.",
-        "notes": "https://github.com/CO2ken/CO2ken/blob/master/Contracts/co2ken.sol",
+        "label": "Mint new FCO2kens",
+        "description": "One FCO2ken represents 1 negative tonne of carbon. New FCO2kens can be created by providing proof that an equivalent amount of carbon offsets have been purchased. An IPFS hash to this proof has to be provided when making this proposal.",
+        "notes": "https://github.com/DeFi-Coder-News-Letter/FCO2ken/blob/master/Contracts/fco2ken.sol",
         "fields": [
           {
             "label": "IPFS hash",
@@ -24,9 +24,9 @@
             "placeholder": "Hash (QmafjwN...)"
           },
           {
-            "label": "Number of CO2kens to be minted",
+            "label": "Number of FCO2kens to be minted",
             "name": "amountTokens",
-            "placeholder": "Input number of CO2kens"
+            "placeholder": "Input number of FCO2kens"
           }
         ],
         "abi": {
@@ -51,8 +51,8 @@
       {
         "id": "approve",
         "label": "Approve DAI movement",
-        "description": "Allows the CO2ken contract to move your DAI for you.",
-        "notes": "https://github.com/CO2ken/CO2ken/blob/master/Contracts/co2ken.sol",
+        "description": "Allows the FCO2ken contract to move your DAI for you.",
+        "notes": "https://github.com/DeFi-Coder-News-Letter/FCO2ken/blob/master/Contracts/fco2ken.sol",
         "fields": [],
         "abi": {
           "constant": false,
@@ -67,8 +67,8 @@
       {
         "id": "withdraw",
         "label": "Withdraw DAI",
-        "description": "Withdraw the DAI funds stored in the CO2ken contract to the CarbonDAO wallet address: <a target=\"_blank\" href=\"https://rinkeby.etherscan.io/address/0xe953b4706b66d4f34100ccc5e3ef5dc8acc5e775\">0xe953B4706B66d4F34100CcC5e3eF5dc8AcC5e775</a>.",
-        "notes": "https://github.com/CO2ken/CO2ken/blob/master/Contracts/co2ken.sol",
+        "description": "Withdraw the DAI funds stored in the FCO2ken contract to the Carbon2oDAO wallet address: <a target=\"_blank\" href=\"https://rinkeby.etherscan.io/address/0xe953b4706b66d4f34100ccc5e3ef5dc8acc5e775\">0xe953B4706B66d4F34100CcC5e3eF5dc8AcC5e775</a>.",
+        "notes": "https://github.com/DeFi-Coder-News-Letter/FCO2ken/blob/master/Contracts/fco2ken.sol",
         "fields": [],
         "abi": {
           "constant": false,
@@ -83,8 +83,8 @@
       {
         "id": "offsetCarbon",
         "label": "Offset emissions with DAI",
-        "description": "Send DAI to retire CO2kens and offset your carbon footprint.",
-        "notes": "https://github.com/CO2ken/CO2ken/blob/master/Contracts/co2ken.sol",
+        "description": "Send DAI to retire FCO2kens and offset your carbon footprint.",
+        "notes": "https://github.com/DeFi-Coder-News-Letter/FCO2ken/blob/master/Contracts/fco2ken.sol",
         "fields": [
           {
             "decimals": 18,
@@ -113,7 +113,7 @@
         "id": "offsetCarbonTons",
         "label": "Offset emissions in tons of CO2",
         "description": "Indicate how many tonnes of CO2 emissions you want to offset. An equivalent amount of CO2kens will be retired.",
-        "notes": "https://github.com/CO2ken/CO2ken/blob/master/Contracts/co2ken.sol",
+        "notes": "https://github.com/DeFi-Coder-News-Letter/FCO2ken/blob/master/Contracts/fco2ken.sol",
         "fields": [
             {
             "label": "Tons of CO2 to be offset",
@@ -139,7 +139,7 @@
       {
         "id": "transferOwnership",
         "label": "Transfer ownership",
-        "description": "Transfer the owernship of the CO2ken contract to a new address.",
+        "description": "Transfer the owernship of the FCO2ken contract to a new address.",
         "notes": "https://github.com/gnosis/dx-contracts/blob/master/contracts/base/EthOracle.sol",
         "fields": [
           {
