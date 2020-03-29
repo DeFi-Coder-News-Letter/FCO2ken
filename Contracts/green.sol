@@ -7,13 +7,13 @@ pragma solidity ^0.6.0;
  * footprint of the function itself.
  */
 
-abstract contract CO2kenLike {
+abstract contract FCO2kenLike {
     function offsetCarbon(uint256 payment) public virtual;
 }
  
 abstract contract CO2kenDataLike {
     uint256 public gasCarbonFootprint;
-    uint256 public co2kenPrice;
+    uint256 public fco2kenPrice;
 }
 
 abstract contract DaiLike {
@@ -21,9 +21,9 @@ abstract contract DaiLike {
 }
 
 contract Green {
-    CO2kenDataLike storageData;
+    FCO2kenDataLike storageData;
     DaiLike daiToken;
-    CO2kenLike co2ken;
+    FCO2kenLike fco2ken;
     
     uint256 public gasPolluted;
     
@@ -31,10 +31,10 @@ contract Green {
     
     // @TODO hard code constructor arguments
     constructor(address storageTarget, address tokenTarget, address daiTarget) public {
-        storageData = CO2kenDataLike(storageTarget);
-        co2ken = CO2kenLike(tokenTarget);
+        storageData = FCO2kenDataLike(storageTarget);
+        fco2ken = FCO2kenLike(tokenTarget);
         daiToken = DaiLike(daiTarget);
-        // approve the co2ken contract to spend our DAI
+        // approve the fco2ken contract to spend our DAI
         daiToken.approve(tokenTarget, uint(-1));
     }
     
@@ -64,6 +64,8 @@ contract Green {
         }
     }
 }
+
+// UPDATE LATER WITH PROPER ADDRESSES FOR NEW FORK CONTRACTS:
 
 // Storage (testnet): 0x127AE08f45d687dA7887ceA369F2f4D95cb9baf2
 // WEENUS (tesnet): 0xaFF4481D10270F50f203E0763e2597776068CBc5
