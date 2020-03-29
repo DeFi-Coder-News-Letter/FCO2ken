@@ -1,17 +1,17 @@
-# CO2ken
+# FCO2ken
 
 ## Contracts
 
-CO2ken has two core Solidity contracts: the ledger contract. which tracks the minting and retiring of CO2kens (`co2ken.sol`) and a storage contract (`co2kenData.sol`), which holds - most importantly - an ownable CO2ken price value.
+FCO2ken has two core Solidity contracts: the ledger contract. which tracks the minting and retiring of FCO2kens (`fco2ken.sol`) and a storage contract (`fco2kenData.sol`), which holds - most importantly - an ownable FCO2ken price value.
 
-### co2ken.sol
+### fco2ken.sol
 
 - `mint(string memory ipfsHash, uint256 amountTokens) public onlyOwner()`: allows the owner to create new CO2kens
 - `withdraw() public onlyOwner()`: allows the owner to withdraw monies received to the contract
 - `offsetCarbon(uint256 payment) public`: allows anyone to pay a dollar-denominated value into the contract to offset carbon
 - `offsetCarbonTons(uint256 tons) public`: allows anyone to pay a ton CO2 denominated value into the contract to offset carbon
 
-### co2kenData.sol
+### fco2kenData.sol
 
 - `setCO2kenPrice(uint256 _co2kenPrice) public onlyOwner()`: allows the owner to set the price of CO2kens
 
@@ -27,13 +27,13 @@ Also contains the `Polluter` contract which `is Green` to demonstrate modifier f
 
 **Rinkeby**
 
-CO2kenData - 0x127AE08f45d687dA7887ceA369F2f4D95cb9baf2
+FCO2kenData - *Add rinkeby addy later*
 
-CO2ken (for demo) - 0x6a1B0C693DD4AA99bA8E93247AA221Fb30525Cfe
+FCO2ken (for demo) - *add later addy for demo contract*
 
-Polluter (is Green) - 0x57AaFA7eA3D66e2C9540d455BDBe093De9DB6bf4
+Polluter (is Green) - *add later addy for demo contract*
 
-WEENUS (test ERC20) - collect test WEENUS by visiting https://rinkeby.etherscan.io/token/0xaff4481d10270f50f203e0763e2597776068cbc5#writeContract connecting web3 wallet and write to `drip()`
+WEENUS (test ERC20) - collect test WEENUS by visiting https://rinkeby.etherscan.io/token/<CONTRACT_ADDRESS_ON_RINKEBY>#writeContract connecting web3 wallet and write to `drip()`
 
 ## The Graph 
 
