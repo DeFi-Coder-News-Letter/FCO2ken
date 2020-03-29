@@ -13,8 +13,8 @@ pragma solidity ^0.6.0;
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol";
 
-abstract contract CO2kenDataLike {
-    uint256 public co2kenPrice;
+abstract contract FCO2kenDataLike {
+    uint256 public fco2kenPrice;
 }
 
 abstract contract DaiLike {
@@ -24,7 +24,7 @@ abstract contract DaiLike {
     function approve(address usr, uint wad) external virtual returns (bool);
 }
 
-contract CO2ken is Ownable {
+contract FCO2ken is Ownable {
     string private _name;
     string private _symbol;
     uint8 private _decimals;
