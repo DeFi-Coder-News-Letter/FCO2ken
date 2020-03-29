@@ -1,7 +1,7 @@
 pragma solidity ^0.6.0;
 
 /**
- * CO2ken storage contract with ownable setters
+ * FCO2ken storage contract with ownable setters
  * and public getters
  */
 
@@ -12,8 +12,8 @@ pragma solidity ^0.6.0;
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol";
 
-contract CO2kenData is Ownable {
-    uint256 public co2kenPrice; // Price in DAI with 18 decimals
+contract FCO2kenData is Ownable {
+    uint256 public fco2kenPrice; // Price in DAI with 18 decimals
 
     // https://digiconomist.net/ethereum-energy-consumption
     //uint256 txCarbonFootprint = 31000000;    // mWh per Ethereum TX (1000 milliWattHours = 1 Wh)
@@ -31,18 +31,18 @@ contract CO2kenData is Ownable {
     // Is equal to gasEnergyFootprint * gridEmissionFactor
     uint256 public gasCarbonFootprint = 355314232223; // tCO2/gas with 18 decimals
 
-    event CO2kenPriceChanged(uint256 newPrice);
+    event FCO2kenPriceChanged(uint256 newPrice);
     event GasEnergyFootprintChanged(uint256 newGasEnergyFootprint);
     event GridEmissionFactorChanged(uint256 newGridEmissionFactor);
     event GasCarbonFootprintChanged(uint256 newGasCarbonFootprint);
 
-    constructor(uint256 _co2kenPrice) public {
-        co2kenPrice = _co2kenPrice;
-        emit CO2kenPriceChanged(_co2kenPrice);
+    constructor(uint256 _fco2kenPrice) public {
+        fco2kenPrice = _fco2kenPrice;
+        emit FCO2kenPriceChanged(_fco2kenPrice);
     }
 
-    function setCO2kenPrice(uint256 _co2kenPrice) public onlyOwner() {
-        co2kenPrice = _co2kenPrice;
+    function setFCO2kenPrice(uint256 _co2kenPrice) public onlyOwner() {
+        fco2kenPrice = _fco2kenPrice;
         emit CO2kenPriceChanged(_co2kenPrice);
     }
 
